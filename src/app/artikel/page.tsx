@@ -12,6 +12,8 @@ export default function ArtikelPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
+  console.log({ selectedCategory }); 
+
   useEffect(() => {
     void fetch("/api/category")
       .then((r) => r.json())
@@ -64,7 +66,7 @@ export default function ArtikelPage() {
                 </div>
               ))}
             </div>
-          ) : articles.length === 0 ? (
+          ) : articles.length === 0 || !articles[0]?.Category ? (
             <div className="flex flex-col items-center justify-center rounded-xl bg-white py-16 shadow-sm sm:py-20">
               <svg xmlns="http://www.w3.org/2000/svg" className="mb-3 h-12 w-12 text-gray-300 sm:mb-4 sm:h-16 sm:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
@@ -74,7 +76,7 @@ export default function ArtikelPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-              {articles.map((article) => (
+              {articles[0]?.Category && articles.map((article) => (
                 <Link
                   key={article.id}
                   href={`/artikel/${article.slug}`}

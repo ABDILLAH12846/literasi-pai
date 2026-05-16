@@ -75,7 +75,7 @@ export default function HomePage() {
             Platform Pembelajaran PAI
           </div>
           <h1 className="mb-3 text-3xl font-extrabold tracking-tight text-white sm:mb-4 sm:text-4xl md:text-5xl">
-            Literasi PAI
+            Lentera PAI
           </h1>
           <p className="mx-auto max-w-2xl text-sm text-emerald-100 sm:text-lg">
             Pusat pembelajaran Pendidikan Agama Islam yang menyediakan artikel, video, review buku, dan kuis interaktif untuk menunjang pembelajaran.
@@ -117,10 +117,19 @@ export default function HomePage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white px-4 py-6 sm:px-8 sm:py-8">
+      <footer className="border-t border-gray-200 bg-white px-4 py-8 sm:px-8 sm:py-10">
         <div className="mx-auto max-w-6xl text-center">
-          <p className="text-xs text-gray-400 sm:text-sm">
-            © 2026 Literasi PAI — Platform Pembelajaran Pendidikan Agama Islam
+          <p className="text-sm font-semibold text-gray-700">Sri Aqilah Maulida</p>
+          <div className="mt-2 flex flex-col items-center gap-1 text-xs text-gray-500 sm:text-sm">
+            <a href="mailto:sri.aqilah@example.com" className="hover:text-emerald-600 transition-colors">
+              sri.aqilah@example.com
+            </a>
+            <a href="tel:+6281234567890" className="hover:text-emerald-600 transition-colors">
+              +62 812-3456-7890
+            </a>
+          </div>
+          <p className="mt-4 text-xs text-gray-400">
+            © 2026 Lentera PAI — Platform Pembelajaran Pendidikan Agama Islam
           </p>
         </div>
       </footer>

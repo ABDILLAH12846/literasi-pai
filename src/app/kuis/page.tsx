@@ -60,7 +60,7 @@ export default function KuisPage() {
                 </div>
               ))}
             </div>
-          ) : quizzes.length === 0 ? (
+          ) : quizzes.length === 0  || !quizzes[0]?.Category ? (
             <div className="flex flex-col items-center justify-center rounded-xl bg-white py-16 shadow-sm sm:py-20">
               <svg xmlns="http://www.w3.org/2000/svg" className="mb-3 h-12 w-12 text-gray-300 sm:mb-4 sm:h-16 sm:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -70,7 +70,7 @@ export default function KuisPage() {
             </div>
           ) : (
             <div className="space-y-3 sm:space-y-4">
-              {quizzes.map((quiz) => (
+              {quizzes[0]?.Category && quizzes.map((quiz) => (
                 <Link
                   key={quiz.id}
                   href={`/kuis/${quiz.id}`}

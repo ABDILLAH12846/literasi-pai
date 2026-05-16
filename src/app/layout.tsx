@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Literasi PAI - Platform Pembelajaran PAI",
+  title: "Lentera PAI - Platform Pembelajaran PAI",
   description: "Platform pembelajaran Pendidikan Agama Islam dengan artikel, video, review buku, dan kuis interaktif",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
