@@ -3,28 +3,6 @@ import Link from "next/link";
 
 const features = [
   {
-    name: "Artikel",
-    desc: "Kumpulan artikel pembelajaran PAI yang bermanfaat",
-    href: "/artikel",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-      </svg>
-    ),
-    color: "from-blue-500 to-blue-600",
-  },
-  {
-    name: "Video Islami",
-    desc: "Kumpulan video pembelajaran Islami dari YouTube",
-    href: "/video",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-      </svg>
-    ),
-    color: "from-red-500 to-red-600",
-  },
-  {
     name: "Review Buku",
     desc: "Ulasan buku-buku bacaan Islami terbaik",
     href: "/review-buku",
@@ -34,17 +12,6 @@ const features = [
       </svg>
     ),
     color: "from-amber-500 to-amber-600",
-  },
-  {
-    name: "Kuis Islami",
-    desc: "Uji pengetahuan Islami dengan kuis interaktif",
-    href: "/kuis",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-    color: "from-purple-500 to-purple-600",
   },
 ];
 
@@ -78,7 +45,7 @@ export default function HomePage() {
             Lentera PAI
           </h1>
           <p className="mx-auto max-w-2xl text-sm text-emerald-100 sm:text-lg">
-            Pusat pembelajaran Pendidikan Agama Islam yang menyediakan artikel, video, review buku, dan kuis interaktif untuk menunjang pembelajaran.
+            Pusat pembelajaran Pendidikan Agama Islam yang menyediakan review buku-buku Islami untuk menunjang pembelajaran.
           </p>
         </div>
       </div>
@@ -86,10 +53,10 @@ export default function HomePage() {
       {/* Features Grid */}
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-8 sm:py-16">
         <h2 className="mb-1 text-center text-xl font-bold text-gray-900 sm:mb-2 sm:text-2xl">
-          Jelajahi Konten
+          Review Buku
         </h2>
         <p className="mb-6 text-center text-sm text-gray-500 sm:mb-10">
-          Pilih menu di bawah untuk mulai belajar
+          Jelajahi ulasan buku-buku Islami
         </p>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
           {features.map((f) => (

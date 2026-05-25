@@ -5,11 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const navItems = [
-  { name: "Beranda", href: "/" },
-  { name: "Artikel", href: "/artikel" },
-  { name: "Video", href: "/video" },
   { name: "Review Buku", href: "/review-buku" },
-  { name: "Kuis", href: "/kuis" },
 ];
 
 export default function Navbar() {
