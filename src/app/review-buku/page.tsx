@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import PageLayout from "~/components/PageLayout";
 import CategoryChips from "~/components/CategoryChips";
+import EmptyState from "~/components/EmptyState";
 import type { Category, BookReview } from "~/types";
 
 function StarRating({ rating }: { rating: number }) {
@@ -54,9 +55,9 @@ export default function ReviewBukuPage() {
       <div className="p-4 sm:p-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-6 sm:mb-8">
-            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Review Buku</h1>
+            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Koleksi Review Buku</h1>
             <p className="mt-1 text-sm text-gray-500 sm:text-base">
-              Ulasan buku-buku bacaan Islami
+              Ulasan dan rekomendasi buku-buku Pendidikan Agama Islam terpilih
             </p>
           </div>
 
@@ -85,13 +86,7 @@ export default function ReviewBukuPage() {
               ))}
             </div>
           ) : reviews.length === 0 || !reviews[0]?.Category ? (
-            <div className="flex flex-col items-center justify-center rounded-xl bg-white py-16 shadow-sm sm:py-20">
-              <svg xmlns="http://www.w3.org/2000/svg" className="mb-3 h-12 w-12 text-gray-300 sm:mb-4 sm:h-16 sm:w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-              <h3 className="text-base font-semibold text-gray-600 sm:text-lg">Belum ada review buku</h3>
-              <p className="mt-1 text-xs text-gray-400 sm:text-sm">Review buku akan muncul di sini setelah ditambahkan</p>
-            </div>
+            <EmptyState />
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               {reviews[0]?.Category && reviews.map((review) => (
@@ -133,7 +128,7 @@ export default function ReviewBukuPage() {
                       <p className="mt-2 text-[10px] text-gray-400 sm:mt-3 sm:text-xs">
                         {new Date(review.createdAt).toLocaleDateString("id-ID", {
                           day: "numeric",
-                          month: "long",
+                          month: "short",
                           year: "numeric",
                         })}
                       </p>

@@ -1,26 +1,46 @@
 import PageLayout from "~/components/PageLayout";
+import Footer from "~/components/Footer";
 import Link from "next/link";
 
-const features = [
+const benefits = [
   {
-    name: "Review Buku",
-    desc: "Ulasan buku-buku bacaan Islami terbaik",
-    href: "/review-buku",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    title: "Referensi Terpercaya",
+    desc: "Setiap ulasan ditulis dengan pendekatan akademis dan objektif untuk membantu Anda memilih buku yang tepat.",
+  },
+  {
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     ),
-    color: "from-amber-500 to-amber-600",
+    title: "Ulasan Terstruktur",
+    desc: "Telaah mendalam yang mencakup ringkasan, analisis, dan penilaian terhadap buku-buku PAI terpilih.",
+  },
+  {
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    ),
+    title: "Hemat Waktu",
+    desc: "Tidak perlu lagi kesulitan memilih buku. Temukan rekomendasi terbaik dalam satu platform.",
   },
 ];
 
 export default function HomePage() {
   return (
     <PageLayout>
-      {/* Hero */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800 px-4 py-12 sm:px-8 sm:py-20">
-        <div className="absolute inset-0 opacity-10">
+      {/* ═══════════════════════════════════════════════════════
+          HERO SECTION
+      ═══════════════════════════════════════════════════════ */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800 px-4 py-14 sm:px-8 sm:py-20 lg:py-28">
+        {/* Decorative pattern */}
+        <div className="absolute inset-0 opacity-[0.07]">
           <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
               <pattern id="islamic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -34,72 +54,193 @@ export default function HomePage() {
             <rect width="100" height="100" fill="url(#islamic-pattern)" />
           </svg>
         </div>
+
+        {/* Decorative circles */}
+        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
+
         <div className="relative mx-auto max-w-4xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs text-emerald-100 backdrop-blur-sm sm:mb-6 sm:px-4 sm:py-2 sm:text-sm">
+          {/* Badge */}
+          <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-medium text-emerald-100 backdrop-blur-sm sm:mb-6 sm:text-sm">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
             </svg>
-            Platform Pembelajaran PAI
+            Telaah Mendalam, Pandangan Bermakna
           </div>
-          <h1 className="mb-3 text-3xl font-extrabold tracking-tight text-white sm:mb-4 sm:text-4xl md:text-5xl">
-            Lentera PAI
-          </h1>
-          <p className="mx-auto max-w-2xl text-sm text-emerald-100 sm:text-lg">
-            Pusat pembelajaran Pendidikan Agama Islam yang menyediakan review buku-buku Islami untuk menunjang pembelajaran.
-          </p>
-        </div>
-      </div>
 
-      {/* Features Grid */}
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-8 sm:py-16">
-        <h2 className="mb-1 text-center text-xl font-bold text-gray-900 sm:mb-2 sm:text-2xl">
-          Review Buku
-        </h2>
-        <p className="mb-6 text-center text-sm text-gray-500 sm:mb-10">
-          Jelajahi ulasan buku-buku Islami
-        </p>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
-          {features.map((f) => (
+          {/* Title */}
+          <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-white sm:mb-5 sm:text-4xl md:text-5xl lg:text-6xl">
+            Ulasan Buku<br className="hidden sm:block" /> Pendidikan Agama Islam
+          </h1>
+
+          {/* Subtitle */}
+          <p className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-emerald-100 sm:mb-10 sm:text-base md:text-lg">
+            Temukan sudut pandang baru melalui ulasan dan rekomendasi buku-buku PAI terpilih untuk menunjang pembelajaran Anda.
+          </p>
+
+          {/* CTA */}
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
             <Link
-              key={f.href}
-              href={f.href}
-              className="group relative overflow-hidden rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:border-gray-300 hover:shadow-lg sm:rounded-2xl sm:p-8"
+              href="/review-buku"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-emerald-700 shadow-lg transition-all hover:bg-emerald-50 hover:shadow-xl sm:px-8 sm:py-3.5 sm:text-base"
             >
-              <div className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${f.color} text-white shadow-lg sm:mb-5 sm:h-14 sm:w-14`}>
-                {f.icon}
-              </div>
-              <h3 className="mb-1.5 text-lg font-bold text-gray-900 group-hover:text-emerald-600 sm:mb-2 sm:text-xl">
-                {f.name}
-              </h3>
-              <p className="text-sm leading-relaxed text-gray-500">{f.desc}</p>
-              <div className="mt-3 flex items-center gap-1 text-sm font-medium text-emerald-600 opacity-0 transition-opacity group-hover:opacity-100 sm:mt-4">
-                Jelajahi
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              Jelajahi Review
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <a
+              href="#tentang"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/10 sm:px-8 sm:py-3.5 sm:text-base"
+            >
+              Pelajari Lebih Lanjut
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          STATISTIK RINGKAS
+      ═══════════════════════════════════════════════════════ */}
+      <section className="border-b border-gray-100 bg-white px-4 py-8 sm:px-8 sm:py-10">
+        <div className="mx-auto grid max-w-4xl grid-cols-3 gap-4 text-center sm:gap-8">
+          <div>
+            <div className="text-2xl font-extrabold text-emerald-600 sm:text-3xl">12+</div>
+            <div className="mt-0.5 text-xs text-gray-500 sm:text-sm">Buku Diulas</div>
+          </div>
+          <div>
+            <div className="text-2xl font-extrabold text-emerald-600 sm:text-3xl">4.5</div>
+            <div className="mt-0.5 text-xs text-gray-500 sm:text-sm">Rating Rata-rata</div>
+          </div>
+          <div>
+            <div className="text-2xl font-extrabold text-emerald-600 sm:text-3xl">5</div>
+            <div className="mt-0.5 text-xs text-gray-500 sm:text-sm">Kategori Buku</div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          TENTANG WEBSITE
+      ═══════════════════════════════════════════════════════ */}
+      <section id="tentang" className="bg-gray-50 px-4 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-10 text-center sm:mb-14">
+            <span className="mb-3 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700 sm:text-sm">
+              Tentang Kami
+            </span>
+            <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl">
+              Apa Itu QuranLens Review?
+            </h2>
+            <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500 sm:text-base">
+              QuranLens Review adalah platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam
+              yang dirancang untuk membantu mahasiswa, siswa, dan pendidik menemukan bacaan terbaik dalam bidang studi Islam.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            {/* Visi */}
+            <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-100 text-emerald-600 sm:mb-4 sm:h-12 sm:w-12">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-            </Link>
-          ))}
-        </div>
-      </div>
+              <h3 className="mb-2 text-lg font-bold text-gray-900 sm:mb-3 sm:text-xl">Visi</h3>
+              <p className="text-sm leading-relaxed text-gray-500 sm:text-base">
+                Menjadi platform ulasan buku PAI terpercaya yang mendorong budaya literasi Islam
+                di kalangan akademisi dan pelajar.
+              </p>
+            </div>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-200 bg-white px-4 py-8 sm:px-8 sm:py-10">
-        <div className="mx-auto max-w-6xl text-center">
-          <p className="text-sm font-semibold text-gray-700">Sri Aqilah Maulida</p>
-          <div className="mt-2 flex flex-col items-center gap-1 text-xs text-gray-500 sm:text-sm">
-            <a href="mailto:sri.aqilah@example.com" className="hover:text-emerald-600 transition-colors">
-              sri.aqilah@example.com
-            </a>
-            <a href="tel:+6281234567890" className="hover:text-emerald-600 transition-colors">
-              +62 812-3456-7890
-            </a>
+            {/* Misi */}
+            <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-600 sm:mb-4 sm:h-12 sm:w-12">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-gray-900 sm:mb-3 sm:text-xl">Misi</h3>
+              <ul className="space-y-2 text-sm leading-relaxed text-gray-500 sm:text-base">
+                <li className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                  Menyajikan ulasan objektif dan terstruktur
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                  Mengkurasi buku PAI berkualitas
+                </li>
+                <li className="flex gap-2">
+                  <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
+                  Mendorong budaya literasi PAI
+                </li>
+              </ul>
+            </div>
           </div>
-          <p className="mt-4 text-xs text-gray-400">
-            © 2026 Lentera PAI — Platform Pembelajaran Pendidikan Agama Islam
-          </p>
         </div>
-      </footer>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          MANFAAT
+      ═══════════════════════════════════════════════════════ */}
+      <section className="bg-white px-4 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center sm:mb-14">
+            <span className="mb-3 inline-block rounded-full bg-emerald-100 px-3 py-1 text-xs font-medium text-emerald-700 sm:text-sm">
+              Manfaat
+            </span>
+            <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl">
+              Mengapa QuranLens Review?
+            </h2>
+            <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500 sm:text-base">
+              Kami menyediakan ulasan yang membantu Anda menemukan buku PAI terbaik dengan lebih mudah dan efisien.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 sm:gap-6">
+            {benefits.map((b) => (
+              <div
+                key={b.title}
+                className="group rounded-xl border border-gray-200 bg-gray-50 p-6 transition-all hover:border-emerald-200 hover:bg-emerald-50 hover:shadow-sm sm:p-8"
+              >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-100 text-emerald-600 transition-colors group-hover:bg-emerald-600 group-hover:text-white sm:mb-5 sm:h-14 sm:w-14">
+                  {b.icon}
+                </div>
+                <h3 className="mb-2 text-base font-bold text-gray-900 sm:mb-3 sm:text-lg">{b.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-500">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          CTA SECTION
+      ═══════════════════════════════════════════════════════ */}
+      <section className="bg-gray-50 px-4 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl">
+            Temukan Buku PAI Terbaik
+          </h2>
+          <p className="mb-8 text-sm leading-relaxed text-gray-500 sm:mb-10 sm:text-base">
+            Jelajahi koleksi ulasan buku Pendidikan Agama Islam yang telah kami kurasi untuk Anda.
+          </p>
+          <Link
+            href="/review-buku"
+            className="inline-flex items-center gap-2 rounded-xl bg-emerald-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:bg-emerald-700 hover:shadow-xl sm:text-base"
+          >
+            Lihat Semua Review
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════
+          FOOTER
+      ═══════════════════════════════════════════════════════ */}
+      <Footer />
     </PageLayout>
   );
 }

@@ -51,11 +51,11 @@ export default async function ReviewBukuDetailPage({
         <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
         </svg>
-        <Link href="/review-buku" className="hover:text-emerald-600">Review Buku</Link>
+        <Link href="/review-buku" className="hover:text-emerald-600">Koleksi Review</Link>
         <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
         </svg>
-        <span className="truncate text-gray-700">{review.bookTitle}</span>
+        <span className="truncate max-w-[200px] text-gray-700">{review.bookTitle}</span>
       </nav>
 
       <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm sm:rounded-2xl">
@@ -100,7 +100,7 @@ export default async function ReviewBukuDetailPage({
               </div>
 
               <p className="text-xs text-gray-400">
-                Dipublikasikan pada{" "}
+                Ulasan ini dipublikasikan pada{" "}
                 {new Date(review.createdAt).toLocaleDateString("id-ID", {
                   day: "numeric",
                   month: "long",
@@ -114,7 +114,7 @@ export default async function ReviewBukuDetailPage({
         {/* Review content */}
         <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
-            Ulasan
+            Telaah Buku
           </h2>
           <div className="whitespace-pre-line text-sm leading-relaxed text-gray-700 sm:text-base">
             {review.review}
@@ -131,7 +131,7 @@ export default async function ReviewBukuDetailPage({
           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
-          Kembali ke Review Buku
+          Kembali ke Koleksi Review
         </Link>
       </div>
     </div>

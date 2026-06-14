@@ -4,8 +4,8 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Lentera PAI - Platform Pembelajaran PAI",
-  description: "Platform pembelajaran Pendidikan Agama Islam dengan artikel, video, review buku, dan kuis interaktif",
+  title: "QuranLens Review — Platform Ulasan Buku Pendidikan Agama Islam",
+  description: "Platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam. Temukan sudut pandang baru melalui telaah mendalam dan rekomendasi buku PAI terpilih.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
