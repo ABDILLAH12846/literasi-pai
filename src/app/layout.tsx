@@ -4,8 +4,8 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "QuranLens Review — Platform Ulasan Buku Pendidikan Agama Islam",
-  description: "Platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam. Temukan sudut pandang baru melalui telaah mendalam dan rekomendasi buku PAI terpilih.",
+  title: "Resensiqro' — Platform Ulasan Buku Pendidikan Agama Islam",
+  description: "Platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam. Read. Reflect. Grow.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
