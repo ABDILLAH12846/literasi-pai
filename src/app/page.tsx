@@ -129,10 +129,10 @@ export default function HomePage() {
               Tentang Kami
             </span>
             <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl">
-              Apa Itu Resensiqro'?
+              Apa Itu Resensiqro&apos;?
             </h2>
             <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500 sm:text-base">
-              Resensiqro' adalah platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam
+              Resensiqro&apos; adalah platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam
               yang dirancang untuk membantu mahasiswa, siswa, dan pendidik menemukan bacaan terbaik dalam bidang studi Islam.
             </p>
           </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
               Manfaat
             </span>
             <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl">
-              Mengapa Resensiqro'?
+              Mengapa Resensiqro&apos;?
             </h2>
             <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500 sm:text-base">
               Kami menyediakan ulasan yang membantu Anda menemukan buku PAI terbaik dengan lebih mudah dan efisien.
