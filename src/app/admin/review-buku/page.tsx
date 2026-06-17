@@ -10,6 +10,10 @@ const emptyForm = {
   rating: "5",
   coverImage: "",
   categoryId: "",
+  about: "",
+  reviewer: "",
+  fit_to: "",
+  quotes: "",
 };
 
 export default function AdminReviewBukuPage() {
@@ -47,6 +51,10 @@ export default function AdminReviewBukuPage() {
       rating: String(review.rating),
       coverImage: review.coverImage ?? "",
       categoryId: String(review.categoryId),
+      about: review.about,
+      reviewer: review.reviewer,
+      fit_to: review.fit_to,
+      quotes: review.quotes,
     });
     setShowForm(true);
   }
@@ -182,6 +190,50 @@ export default function AdminReviewBukuPage() {
                   rows={5}
                   className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
                   placeholder="Tulis review buku di sini..."
+                  required
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <label className="mb-1 block text-xs font-medium text-gray-700 sm:text-sm">Tentang</label>
+                <textarea
+                  value={form.about}
+                  onChange={(e) => setForm({ ...form, about: e.target.value })}
+                  rows={5}
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  placeholder="Tulis tentang buku di sini..."
+                  required
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <label className="mb-1 block text-xs font-medium text-gray-700 sm:text-sm">Resensi</label>
+                <textarea
+                  value={form.reviewer}
+                  onChange={(e) => setForm({ ...form, reviewer: e.target.value })}
+                  rows={5}
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  placeholder="Tulis resensi buku di sini..."
+                  required
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <label className="mb-1 block text-xs font-medium text-gray-700 sm:text-sm">Cocok Untuk:</label>
+                <textarea
+                  value={form.fit_to}
+                  onChange={(e) => setForm({ ...form, fit_to: e.target.value })}
+                  rows={5}
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  placeholder="Tulis siapa aja yang cocok dengan buku ini di sini..."
+                  required
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <label className="mb-1 block text-xs font-medium text-gray-700 sm:text-sm">Kutipan Menarik</label>
+                <textarea
+                  value={form.quotes}
+                  onChange={(e) => setForm({ ...form, quotes: e.target.value })}
+                  rows={5}
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                  placeholder="Tulis kutipan menarik di sini..."
                   required
                 />
               </div>

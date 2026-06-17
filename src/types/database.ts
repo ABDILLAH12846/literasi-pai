@@ -53,6 +53,10 @@ export interface BookReviewRow {
   updatedAt: string;
   categoryId: number;
   createdById: string;
+  about: string;
+  reviewer: string;
+  fit_to: string;
+  quotes: string;
 }
 
 export interface BookReview extends BookReviewRow {

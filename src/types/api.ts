@@ -21,6 +21,10 @@ export interface BookReviewBody {
   rating: number | string;
   coverImage?: string;
   categoryId: number | string;
+  about: string;
+  reviewer: string;
+  fit_to: string;
+  quotes: string;
 }
 
 export interface QuizQuestionInput {

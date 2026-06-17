@@ -4,64 +4,19 @@ import Link from "next/link";
 
 const benefits = [
   {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-        />
-      </svg>
-    ),
-    title: "Referensi Terpercaya",
-    desc: "Setiap ulasan ditulis dengan pendekatan akademis dan objektif untuk membantu Anda memilih buku yang tepat.",
+    icon: "📚",
+    title: "Bacaan yang Relevan",
+    desc: "Rekomendasi buku sesuai kebutuhan dan minat pengguna.",
   },
   {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-        />
-      </svg>
-    ),
-    title: "Ulasan Terstruktur",
-    desc: "Telaah mendalam yang mencakup ringkasan, analisis, dan penilaian terhadap buku-buku PAI terpilih.",
+    icon: "💡",
+    title: "Inspirasi dan Solusi",
+    desc: "Membantu menemukan wawasan dan motivasi dari setiap bacaan.",
   },
   {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={1.5}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M13 10V3L4 14h7v7l9-11h-7z"
-        />
-      </svg>
-    ),
-    title: "Hemat Waktu",
-    desc: "Tidak perlu lagi kesulitan memilih buku. Temukan rekomendasi terbaik dalam satu platform.",
+    icon: "🌱",
+    title: "Tumbuh Bersama Literasi",
+    desc: "Mendukung pengembangan diri melalui budaya membaca.",
   },
 ];
 
@@ -128,17 +83,14 @@ export default function HomePage() {
 
           {/* Title */}
           <h1 className="mb-4 text-3xl font-extrabold tracking-tight text-white sm:mb-5 sm:text-4xl md:text-5xl lg:text-6xl">
-            Platform Rekomendasi
-            <br className="hidden sm:block" /> Buku untuk Generasi Muda Muslim
+            Temukan Bacaan,
+            <br className="hidden sm:block" /> Temukan Solusi.
           </h1>
 
           {/* Subtitle */}
           <p className="mx-auto mb-8 max-w-2xl text-sm leading-relaxed text-emerald-100 sm:mb-10 sm:text-base md:text-lg">
-            Temukan buku yang tepat untuk setiap perjalanan hidupmu. Dari
-            kecemasan, kehilangan motivasi, hingga pencarian makna dan
-            ketenangan, kami menghadirkan rekomendasi buku pilihan yang dapat
-            membantu mahasiswa dan generasi muda Muslim tumbuh, belajar, dan
-            menemukan inspirasi dalam menghadapi berbagai tantangan kehidupan.
+            Rekomendasi buku yang membantu kamu bertumbuh dalam pengembangan
+            diri, produktivitas, kesehatan mental, dan spiritualitas.
           </p>
 
           {/* CTA */}
@@ -218,10 +170,10 @@ export default function HomePage() {
               Apa Itu ResensiQro&apos;?
             </h2>
             <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500 sm:text-base">
-              ResensiQro&apos; adalah platform ulasan dan rekomendasi buku-buku
-              Pendidikan Agama Islam yang dirancang untuk membantu mahasiswa,
-              siswa, dan pendidik menemukan bacaan terbaik dalam bidang studi
-              Islam.
+              ResensiQro&apos; merupakan platform literasi digital yang
+              menyediakan rekomendasi dan ulasan buku untuk mendukung
+              pembelajaran, pengembangan diri, serta penguatan nilai-nilai
+              spiritual bagi mahasiswa dan generasi muda muslim.
             </p>
           </div>
 
@@ -253,8 +205,10 @@ export default function HomePage() {
                 Visi
               </h3>
               <p className="text-sm leading-relaxed text-gray-500 sm:text-base">
-                Menjadi platform ulasan buku PAI terpercaya yang mendorong
-                budaya literasi Islam di kalangan akademisi dan pelajar.
+                Menjadi platform literasi digital yang membantu mahasiswa dan
+                generasi muda Muslim menemukan bacaan yang inspiratif, relevan,
+                dan bermanfaat untuk mendukung pengembangan diri, peningkatan
+                wawasan, serta penguatan nilai-nilai keislaman.
               </p>
             </div>
 
@@ -282,15 +236,17 @@ export default function HomePage() {
               <ul className="space-y-2 text-sm leading-relaxed text-gray-500 sm:text-base">
                 <li className="flex gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
-                  Menyajikan ulasan objektif dan terstruktur
+                  Menyediakan rekomendasi dan ulasan buku yang relevan dan
+                  berkualitas.
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
-                  Mengkurasi buku PAI berkualitas
+                  Mendorong budaya membaca dan pembelajaran sepanjang hayat.
                 </li>
                 <li className="flex gap-2">
                   <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
-                  Mendorong budaya literasi PAI
+                  Mendukung pengembangan diri, wawasan, dan spiritualitas
+                  generasi muda Muslim.
                 </li>
               </ul>
             </div>
@@ -343,11 +299,11 @@ export default function HomePage() {
       <section className="bg-gray-50 px-4 py-14 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-3 text-2xl font-bold text-gray-900 sm:mb-4 sm:text-3xl">
-            Temukan Buku PAI Terbaik
+            Mulai Perjalanan Membacamu
           </h2>
           <p className="mb-8 text-sm leading-relaxed text-gray-500 sm:mb-10 sm:text-base">
-            Jelajahi koleksi ulasan buku Pendidikan Agama Islam yang telah kami
-            kurasi untuk Anda.
+            Temukan buku yang sesuai dengan kebutuhanmu dan dapatkan wawasan
+            baru dari setiap bacaan.
           </p>
           <Link
             href="/review-buku"

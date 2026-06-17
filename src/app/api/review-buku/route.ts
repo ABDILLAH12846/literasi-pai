@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
 
   const raw = await req.json();
   const body = raw as BookReviewBody;
-  const { bookTitle, author, review, rating, coverImage, categoryId } = body;
+  const { bookTitle, author, review, rating, coverImage, categoryId, about, reviewer, fit_to, quotes } = body;
 
   const { data, error } = await supabase
     .from("BookReview")
@@ -55,6 +55,10 @@ export async function POST(req: NextRequest) {
       rating: Number(rating),
       coverImage,
       categoryId: Number(categoryId),
+      about,
+      reviewer,
+      fit_to,
+      quotes,
       createdById: user.id,
       published: true,
     })
@@ -77,7 +81,7 @@ export async function PUT(req: NextRequest) {
   }
 
   const raw = await req.json();
-  const { id, bookTitle, author, review, rating, coverImage, categoryId } = raw as {
+  const { id, bookTitle, author, review, rating, coverImage, categoryId, about, reviewer, fit_to, quotes } = raw as {
     id: number;
   } & BookReviewBody;
 
@@ -94,6 +98,10 @@ export async function PUT(req: NextRequest) {
       rating: Number(rating),
       coverImage,
       categoryId: Number(categoryId),
+      about,
+      reviewer,
+      fit_to,
+      quotes,
     })
     .eq("id", Number(id))
     .select("*, Category(id, name, slug)")
