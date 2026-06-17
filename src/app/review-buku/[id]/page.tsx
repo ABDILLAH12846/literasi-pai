@@ -151,7 +151,7 @@ export default async function ReviewBukuDetailPage({
             Kutipan Menarik
           </h2>
           <div className="whitespace-pre-line text-sm leading-relaxed text-gray-700 sm:text-base">
-            {review.about}
+            {review.quotes}
           </div>
         </div>
       </div>
