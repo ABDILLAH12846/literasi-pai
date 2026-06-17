@@ -1,5 +1,5 @@
 # 📐 Dokumen Redesign Konsep & Copywriting
-# Resensiqro' — Platform Ulasan Buku Pendidikan Agama Islam
+# ResensiQro' — Platform Ulasan Buku Pendidikan Agama Islam
 
 **Dibuat:** 14 Juni 2026  
 **Branch:** `redesign-concept`
@@ -12,7 +12,7 @@
 
 | No | Nama | Alasan |
 |----|------|--------|
-| 1 | **Resensiqro'** ⭐ (TERPILIH) | Menggabungkan "Quran" (identitas Islam) + "Lens" (lensa/analisis) + Review. Modern, akademis, mudah diingat. |
+| 1 | **ResensiQro'** ⭐ (TERPILIH) | Menggabungkan "Quran" (identitas Islam) + "Lens" (lensa/analisis) + Review. Modern, akademis, mudah diingat. |
 | 2 | Syauqul Kitab | Bahasa Arab yang berarti "Kerinduan akan Kitab". Puitis tapi kurang modern. |
 | 3 | Maktaba Review | "Maktaba" = perpustakaan dalam bahasa Arab. Terdengar akademis. |
 | 4 | Nurul Kitab | "Nurul" = cahaya. Klasik tapi kurang mencerminkan fitur review. |
@@ -23,7 +23,7 @@
 | 9 | Tadabbur Review | "Tadabbur" = renungan. Sangat relevan dengan mengulas buku. |
 | 10 | Kitabuna | "Kitabuna" = kitab kami. Simpel tapi kurang profesional. |
 
-### Nama Terpilih: **Resensiqro'**
+### Nama Terpilih: **ResensiQro'**
 
 **Alasan pemilihan:**
 - **Modern & Profesional:** Kata "Lens" memberikan kesan analitis dan mendalam
@@ -47,10 +47,10 @@
 > **Temukan sudut pandang baru melalui ulasan dan rekomendasi buku-buku PAI terpilih untuk menunjang pembelajaran Anda.**
 
 ### Deskripsi Singkat Website
-> Resensiqro' adalah platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam yang dirancang untuk membantu mahasiswa, siswa, dan pendidik menemukan bacaan terbaik dalam bidang studi Islam.
+> ResensiQro' adalah platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam yang dirancang untuk membantu mahasiswa, siswa, dan pendidik menemukan bacaan terbaik dalam bidang studi Islam.
 
 ### Latar Belakang
-> Di era informasi yang begitu deras, menemukan buku PAI yang berkualitas dan relevan menjadi tantangan tersendiri. Banyak mahasiswa dan siswa kesulitan memilih buku yang sesuai dengan kebutuhan pembelajaran mereka. Resensiqro' hadir sebagai solusi dengan menyajikan ulasan terstruktur dan rekomendasi buku-buku PAI yang telah dikurasi, sehingga memudahkan proses pemilihan bacaan yang bermutu.
+> Di era informasi yang begitu deras, menemukan buku PAI yang berkualitas dan relevan menjadi tantangan tersendiri. Banyak mahasiswa dan siswa kesulitan memilih buku yang sesuai dengan kebutuhan pembelajaran mereka. ResensiQro' hadir sebagai solusi dengan menyajikan ulasan terstruktur dan rekomendasi buku-buku PAI yang telah dikurasi, sehingga memudahkan proses pemilihan bacaan yang bermutu.
 
 ### Tujuan Website
 > 1. Menyediakan ulasan terpercaya mengenai buku-buku Pendidikan Agama Islam
@@ -68,9 +68,9 @@
 > 4. Menjembatani antara pembaca dengan bacaan berkualitas melalui rekomendasi yang terpercaya
 
 ### Teks "Tentang Kami"
-> **Tentang Resensiqro'**
+> **Tentang ResensiQro'**
 >
-> Resensiqro' adalah platform ulasan buku yang berfokus pada kajian Pendidikan Agama Islam. Kami menyajikan telaah mendalam terhadap berbagai buku PAI — mulai dari tafsir, fikih, akidah, sejarah Islam, hingga pendidikan karakter Islami — untuk membantu Anda menemukan bacaan yang paling sesuai.
+> ResensiQro' adalah platform ulasan buku yang berfokus pada kajian Pendidikan Agama Islam. Kami menyajikan telaah mendalam terhadap berbagai buku PAI — mulai dari tafsir, fikih, akidah, sejarah Islam, hingga pendidikan karakter Islami — untuk membantu Anda menemukan bacaan yang paling sesuai.
 >
 > Setiap ulasan ditulis dengan pendekatan akademis namun tetap mudah dipahami, sehingga dapat menjadi pertimbangan yang berharga sebelum Anda memilih buku untuk dibaca atau dijadikan referensi pembelajaran.
 
@@ -132,7 +132,7 @@
 ```
 ┌─────────────────────────────────────┐
 │           NAVBAR                    │
-│  Resensiqro'    [Review Buku] │
+│  ResensiQro'    [Review Buku] │
 ├─────────────────────────────────────┤
 │           HERO SECTION              │
 │   Badge: Telaah Mendalam            │
@@ -144,7 +144,7 @@
 │   📚 12 Buku  ⭐ 4.5 Rating Rata2  │
 ├─────────────────────────────────────┤
 │         TENTANG WEBSITE            │
-│   Apa itu Resensiqro'?        │
+│   Apa itu ResensiQro'?        │
 │   Deskripsi + Visi Misi singkat    │
 ├─────────────────────────────────────┤
 │           MANFAAT                  │

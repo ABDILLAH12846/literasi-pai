@@ -4,7 +4,7 @@ import { type Metadata } from "next";
 import { Geist } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Resensiqro&apos; — Platform Ulasan Buku Pendidikan Agama Islam",
+  title: "ResensiQro&apos; — Platform Ulasan Buku Pendidikan Agama Islam",
   description: "Platform ulasan dan rekomendasi buku-buku Pendidikan Agama Islam. Read. Reflect. Grow.",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };

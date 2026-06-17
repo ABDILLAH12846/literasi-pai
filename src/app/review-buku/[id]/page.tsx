@@ -99,14 +99,14 @@ export default async function ReviewBukuDetailPage({
                 </span>
               </div>
 
-              <p className="text-xs text-gray-400">
+              {/* <p className="text-xs text-gray-400">
                 Ulasan ini dipublikasikan pada{" "}
                 {new Date(review.createdAt).toLocaleDateString("id-ID", {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
                 })}
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

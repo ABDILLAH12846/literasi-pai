@@ -125,13 +125,13 @@ export default function ReviewBukuPage() {
                       <p className="line-clamp-3 text-xs leading-relaxed text-gray-600 sm:text-sm">
                         {review.review}
                       </p>
-                      <p className="mt-2 text-[10px] text-gray-400 sm:mt-3 sm:text-xs">
+                      {/* <p className="mt-2 text-[10px] text-gray-400 sm:mt-3 sm:text-xs">
                         {new Date(review.createdAt).toLocaleDateString("id-ID", {
                           day: "numeric",
                           month: "short",
                           year: "numeric",
                         })}
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 </Link>
