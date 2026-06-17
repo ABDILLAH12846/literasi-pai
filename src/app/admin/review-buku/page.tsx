@@ -204,7 +204,7 @@ export default function AdminReviewBukuPage() {
                   required
                 />
               </div>
-              <div className="sm:col-span-2">
+              {/* <div className="sm:col-span-2">
                 <label className="mb-1 block text-xs font-medium text-gray-700 sm:text-sm">Resensi</label>
                 <textarea
                   value={form.reviewer}
@@ -214,7 +214,7 @@ export default function AdminReviewBukuPage() {
                   placeholder="Tulis resensi buku di sini..."
                   required
                 />
-              </div>
+              </div> */}
               <div className="sm:col-span-2">
                 <label className="mb-1 block text-xs font-medium text-gray-700 sm:text-sm">Cocok Untuk:</label>
                 <textarea

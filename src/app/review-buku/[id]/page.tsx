@@ -116,7 +116,7 @@ export default async function ReviewBukuDetailPage({
         {/* Review content */}
         <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
-            Telaah Buku
+            Resensi
           </h2>
           <div className="whitespace-pre-line text-sm leading-relaxed text-gray-700 sm:text-base">
             {review.review}
@@ -130,14 +130,14 @@ export default async function ReviewBukuDetailPage({
             {review.about}
           </div>
         </div>
-        <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
+        {/* <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
             Resensi
           </h2>
           <div className="whitespace-pre-line text-sm leading-relaxed text-gray-700 sm:text-base">
             {review.reviewer}
           </div>
-        </div>
+        </div> */}
         <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
             Cocok Untuk
