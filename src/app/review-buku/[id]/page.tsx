@@ -114,20 +114,23 @@ export default async function ReviewBukuDetailPage({
         </div>
 
         {/* Review content */}
-        <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
-          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
-            Resensi
-          </h2>
-          <div className="whitespace-pre-line text-sm leading-relaxed text-gray-700 sm:text-base">
-            {review.review}
-          </div>
-        </div>
+        {
+          review?.about &&
         <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
             Tentang Buku
           </h2>
           <div className="whitespace-pre-line text-sm leading-relaxed text-gray-700 sm:text-base">
             {review.about}
+          </div>
+        </div>
+        }
+        <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
+          <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
+            Resensi
+          </h2>
+          <div className="whitespace-pre-line text-sm leading-relaxed text-gray-700 sm:text-base">
+            {review.review}
           </div>
         </div>
         {/* <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
@@ -138,6 +141,7 @@ export default async function ReviewBukuDetailPage({
             {review.reviewer}
           </div>
         </div> */}
+        {review?.fit_to &&
         <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
             Cocok Untuk
@@ -146,6 +150,8 @@ export default async function ReviewBukuDetailPage({
             {review.fit_to}
           </div>
         </div>
+        }
+        {review?.quotes &&
         <div className="border-t border-gray-100 bg-gray-50 p-5 sm:p-8">
           <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-400 sm:mb-4">
             Kutipan Menarik
@@ -154,6 +160,7 @@ export default async function ReviewBukuDetailPage({
             {review.quotes}
           </div>
         </div>
+        }
       </div>
 
       {/* Back link */}
