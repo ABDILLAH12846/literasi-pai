@@ -49,13 +49,13 @@ export default function Footer() {
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-900">Kontak</h3>
             <ul className="space-y-2 text-sm text-gray-500">
               <li>
-                <a href="mailto:sri.aqilah@example.com" className="transition-colors hover:text-emerald-600">
-                  sri.aqilah@example.com
+                <a href="mailto:sriaqilahmld@gmail.com" className="transition-colors hover:text-emerald-600">
+                  sriaqilahmld@gmail.com
                 </a>
               </li>
               <li>
                 <a href="tel:+6281234567890" className="transition-colors hover:text-emerald-600">
-                  +62 812-3456-7890
+                  +62 822-8741-9905
                 </a>
               </li>
               <li className="pt-2 text-xs text-gray-400">
