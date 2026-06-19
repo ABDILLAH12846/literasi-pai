@@ -57,7 +57,7 @@ export default function ReviewBukuPage() {
           <div className="mb-6 sm:mb-8">
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Koleksi Review Buku</h1>
             <p className="mt-1 text-sm text-gray-500 sm:text-base">
-              Ulasan dan rekomendasi buku-buku Pendidikan Agama Islam terpilih
+              Ulasan dan rekomendasi buku-buku terpilih
             </p>
           </div>
 
