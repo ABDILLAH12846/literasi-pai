@@ -267,8 +267,8 @@ export default function HomePage() {
               Mengapa ResensiQro&apos;?
             </h2>
             <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-500 sm:text-base">
-              Kami menyediakan ulasan yang membantu Anda menemukan buku PAI
-              terbaik dengan lebih mudah dan efisien.
+              Kami menyediakan ulasan yang membantu Anda menemukan buku terbaik
+              dengan lebih mudah dan efisien.
             </p>
           </div>
 

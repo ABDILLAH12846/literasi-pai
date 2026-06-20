@@ -68,7 +68,7 @@ export default function Sidebar({ open, onClose }: SidebarProps) {
                 </svg>
               </div>
               <div>
-                <h1 className="text-lg font-bold text-gray-900">Lentera PAI</h1>
+                <h1 className="text-lg font-bold text-gray-900">ResensiQro`</h1>
                 <p className="text-xs text-gray-500">Admin Panel</p>
               </div>
             </div>

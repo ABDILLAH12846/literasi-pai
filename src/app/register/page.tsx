@@ -74,7 +74,7 @@ export default function RegisterPage() {
             </svg>
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Buat Akun Admin</h1>
-          <p className="mt-1 text-sm text-gray-500">Daftar untuk mengelola Lentera PAI</p>
+          <p className="mt-1 text-sm text-gray-500">Daftar untuk mengelola ResensiQro`</p>
         </div>
 
         {/* Form */}

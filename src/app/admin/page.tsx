@@ -27,7 +27,7 @@ export default async function AdminPage() {
         <div className="mb-6 sm:mb-8">
           <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">Admin Panel</h1>
           <p className="mt-1 text-sm text-gray-500 sm:text-base">
-            Selamat datang, {user?.user_metadata?.name ?? "Admin"}! Kelola konten platform Lentera PAI.
+            Selamat datang, {user?.user_metadata?.name ?? "Admin"}! Kelola konten ResensiQro`.
           </p>
         </div>
 
