@@ -12,8 +12,6 @@ export default function ArtikelPage() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
-  console.log({ selectedCategory }); 
-
   useEffect(() => {
     void fetch("/api/category")
       .then((r) => r.json())

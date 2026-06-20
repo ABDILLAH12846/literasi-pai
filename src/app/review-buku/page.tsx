@@ -39,16 +39,14 @@ export default function ReviewBukuPage() {
 
   useEffect(() => {
     setLoading(true);
-    const url = selectedCategory
-      ? `/api/review-buku?category=${selectedCategory}`
-      : "/api/review-buku";
+    const url = "/api/review-buku";
     void fetch(url)
       .then((r) => r.json())
       .then((data) => {
         setReviews(data as BookReview[]);
         setLoading(false);
       });
-  }, [selectedCategory]);
+  }, []);
 
   return (
     <PageLayout>
@@ -85,11 +83,11 @@ export default function ReviewBukuPage() {
                 </div>
               ))}
             </div>
-          ) : reviews.length === 0 || !reviews[0]?.Category ? (
+          ) : reviews.length === 0 ? (
             <EmptyState />
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
-              {reviews[0]?.Category && reviews.map((review) => (
+              { reviews.filter((item) => selectedCategory ? item?.Category?.slug === selectedCategory : true).map((review) => (
                 <Link
                   key={review.id}
                   href={`/review-buku/${review.id}`}

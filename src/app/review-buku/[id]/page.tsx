@@ -41,8 +41,6 @@ export default async function ReviewBukuDetailPage({
   const { id } = await params;
   const review = await getBookReview(Number(id));
 
-  console.log({ review });
-
   if (!review) notFound();
 
   return (
